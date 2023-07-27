@@ -33,7 +33,7 @@ namespace StepwiseBuilder
         private class Impl : ISpecifyCarType, ISpecifyWheelSize, IBuildCar
         {
 
-            private Car car = new Car();
+            private Car car = new();
             public Car Build()
             {
                 return car;
