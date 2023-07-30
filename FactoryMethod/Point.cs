@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FactoryMethod
+﻿namespace FactoryMethod
 {
     public class Point
     {
@@ -15,15 +9,26 @@ namespace FactoryMethod
             this.Y = y;
         }
 
+        public override string ToString()
+        {
+            return $"{nameof(X)} ; {X}, {nameof(Y)} ; {Y}";
+        }
 
-        // factory method
-        public static Point NewCartesianPoint(double x, double y)
+        public static Point Origin = new(0,0);
+
+        public static class Factory
         {
-            return new Point(x, y);
+            // factory method
+            public static Point NewCartesianPoint(double x, double y)
+            {
+                return new Point(x, y);
+            }
+            public static Point NewPolanPoint(double rho, double theta)
+            {
+                return new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
+            }
         }
-        public static Point NewPolanPoint(double rho, double theta)
-        {
-            return new Point(rho*Math.Cos(theta), rho*Math.Sin(theta));
-        }
+
     }
+
 }
