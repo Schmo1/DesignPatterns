@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System.Runtime.Serialization;
+using static System.Console;
 
 namespace Abstract_Factory
 {
@@ -51,28 +52,76 @@ namespace Abstract_Factory
 
     public class HotDrinkMachine
     {
-        public enum AvailableDrink
-        {
-            Coffee, Tea
-        }
+        //this violates the open/closes principle
 
-        private Dictionary<AvailableDrink, IHotDrinkFactory> factories = new();
+        //public enum AvailableDrink
+        //{
+        //    Coffee, Tea
+        //}
 
+        //private Dictionary<AvailableDrink, IHotDrinkFactory> factories = new();
+
+        //public HotDrinkMachine()
+        //{
+        //    foreach (AvailableDrink drink in Enum.GetValues(typeof(AvailableDrink)))
+        //    {
+        //        var factory = (IHotDrinkFactory)Activator.CreateInstance(
+        //            Type.GetType("Abstract_Factory." + Enum.GetName(typeof(AvailableDrink), drink) + "Factory")
+        //            );
+
+        //        factories.Add(drink, factory);
+        //    }
+        //}
+
+        //public IHotDrink MakeDrink(AvailableDrink drink, int amount)
+        //{
+        //    return factories[drink].Prepare(amount);
+        //}
+
+        private List<Tuple<string, IHotDrinkFactory>> factories = new();
+        
         public HotDrinkMachine()
         {
-            foreach (AvailableDrink drink in Enum.GetValues(typeof(AvailableDrink)))
+            foreach (Type t in typeof(HotDrinkMachine).Assembly.GetTypes())
             {
-                var factory = (IHotDrinkFactory)Activator.CreateInstance(
-                    Type.GetType("Abstract_Factory." + Enum.GetName(typeof(AvailableDrink), drink) + "Factory")
-                    );
-
-                factories.Add(drink, factory);
+                if(typeof(IHotDrinkFactory).IsAssignableFrom(t) &&!t.IsInterface)
+                {
+                    factories.Add(Tuple.Create(
+                        t.Name.Replace("Factory", string.Empty),
+                        (IHotDrinkFactory)Activator.CreateInstance(t)
+                        ));
+                }
             }
         }
 
-        public IHotDrink MakeDrink(AvailableDrink drink, int amount)
+        public IHotDrink MakeDrink()
         {
-            return factories[drink].Prepare(amount);
+            WriteLine("Available drink:");
+            for (int i = 0; i < factories.Count; i++)
+            {
+                var tuple = factories[i];
+                WriteLine($"{i}: {tuple.Item1}");
+            }
+            while (true)
+            {
+                string s;
+                if((s = ReadLine()) != null
+                    && int.TryParse(s, out int i)
+                    && i >= 0
+                    && i < factories.Count)
+                {
+                    Write("Specify amount: ");
+                    s = ReadLine();
+                    if(s != null
+                        && int.TryParse(s, out int amount)
+                        && amount > 0)
+                    {
+                        return factories[i].Item2.Prepare(amount);
+                    }
+                }
+
+                WriteLine("Incorrect input! Try again!");
+            }
         }
     }
 }

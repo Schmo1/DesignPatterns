@@ -33,6 +33,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousFactoryMethod",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract Factory", "Abstract Factory\Abstract Factory.csproj", "{D0C7CAC4-F53F-49C4-B1AC-AD7EB13BEC76}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{824DB5EC-AFA0-4AFE-BCEC-BB6DFA3E1924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{C3984E7A-471A-4AFF-B307-3AAA8532348E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,10 @@ Global
 		{D0C7CAC4-F53F-49C4-B1AC-AD7EB13BEC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C7CAC4-F53F-49C4-B1AC-AD7EB13BEC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C7CAC4-F53F-49C4-B1AC-AD7EB13BEC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3984E7A-471A-4AFF-B307-3AAA8532348E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3984E7A-471A-4AFF-B307-3AAA8532348E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3984E7A-471A-4AFF-B307-3AAA8532348E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3984E7A-471A-4AFF-B307-3AAA8532348E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +112,7 @@ Global
 		{14308966-1AAC-40EE-A0ED-74740CEA1A60} = {4F670928-7DB7-4E4E-8093-AFE03FC99360}
 		{BA5BA78F-8D17-4B8F-A126-7BED13250848} = {4F670928-7DB7-4E4E-8093-AFE03FC99360}
 		{D0C7CAC4-F53F-49C4-B1AC-AD7EB13BEC76} = {4F670928-7DB7-4E4E-8093-AFE03FC99360}
+		{C3984E7A-471A-4AFF-B307-3AAA8532348E} = {824DB5EC-AFA0-4AFE-BCEC-BB6DFA3E1924}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3149C-2C37-43A6-BE3C-35C4C200B08C}

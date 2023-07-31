@@ -8,13 +8,8 @@ namespace Abstract_Factory
         static void Main(string[] args)
         {
             var machine = new HotDrinkMachine();
-            var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Tea, 100);
+            var drink = machine.MakeDrink();
             drink.Consume();
-
-
-            WriteLine(typeof(HotDrinkMachine));
-            WriteLine(Type.GetType("Abstract_Factory.HotDrinkMachine"));
-            
         }
     }
 }
