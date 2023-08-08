@@ -75,10 +75,10 @@ namespace CopyThroughSerialization
 
         static void Main(string[] args)
         {
-            var john = new Person(new string[] { "John", "Smith" }, new Address("Kehlegg", 123));
+            var john = new Person(new string[] { "John", "Smith" }, new Address() {HouseNumber = 123, StreetName = "Kehlegg"});
 
 
-            Person david = john.DeepCopyJson();
+            Person? david = john.DeepCopyJson();
 
             david.Names = new string[] { "David", "Schmoranz" };
             david.Addresse.StreetName = "Nenzing";
@@ -86,6 +86,9 @@ namespace CopyThroughSerialization
 
             Console.WriteLine(john);
             Console.WriteLine(david);
+            
         }
+
+
     }
 }
