@@ -2,9 +2,9 @@
 {
     internal class Program
     {
-        static async void Main(string[] args)
+        static void Main(string[] args)
         {
-            Foo bar = await Foo.CreateAsync();
+            //Foo bar = await Foo.CreateAsync();
         }
 
         

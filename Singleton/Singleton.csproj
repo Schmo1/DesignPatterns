@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
     <PackageReference Include="morelinq" Version="3.4.2" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
   </ItemGroup>
 
   <ItemGroup>
