@@ -42,6 +42,31 @@ namespace Singleton
             }
         }
 
+        public class OrdinaryDatabase: IDatabase
+        {
+            private Dictionary<string, int> capitals;
+            
+
+            public OrdinaryDatabase()
+            {
+                
+                Console.WriteLine("Initializing database");
+
+                capitals = File.ReadAllLines(
+                            Path.Combine(
+                                new FileInfo(typeof(IDatabase).Assembly.Location).DirectoryName, "capitals.txt"))
+                          .Batch(2)
+                          .ToDictionary(
+                            list => list.ElementAt(0).Trim(),
+                            list => int.Parse(list.ElementAt(1)));
+            }
+
+            public int GetPopulation(string name)
+            {
+                return capitals[name];
+            }
+        }
+
         public class SingletonRecordFinder
         {
             public int GetTotalPopulation(IEnumerable<string> names)
@@ -55,29 +80,44 @@ namespace Singleton
             }
         }
 
-        [TestFixture]
-        public class SingletonTests
+        public class ConfigurableRecordFinder
         {
-            [Test]
-            public void IsSingletonTest()
+            private IDatabase database;
+
+            public ConfigurableRecordFinder(IDatabase database)
             {
-                var db = SingletonDatabase.Instance;
-                var db2 = SingletonDatabase.Instance;
-                Assert.That(db, Is.SameAs(db2));
-                Assert.That(SingletonDatabase.Count, Is.EqualTo(1));
+                this.database = database ?? throw new ArgumentNullException(nameof(database));
             }
 
-            [Test]
-            public void SingletonTotalPopulationTest()
+            public int GetTotalPopulation(IEnumerable<string> names)
             {
-                var rf = new SingletonRecordFinder();
-                var names = new[] { "Seoul", "Mexico City" };
-                int tp = rf.GetTotalPopulation(names);
-                Assert.That(tp, Is.EqualTo(17500000+17400000));
+                int result = 0;
+                foreach (string name in names)
+                {
+                    result += database.GetPopulation(name);
+                }
+                return result;
             }
-
 
         }
+
+        public class DummyDatabase : IDatabase
+        {
+            public int GetPopulation(string name)
+            {
+                return new Dictionary<string, int>()
+                {
+                    ["alpha"] = 1,
+                    ["beta"] = 2,
+                    ["gamma"] = 3
+                }[name];
+            }   
+        }
+
+        
+
+
+        
 
 
         static void Main(string[] args)

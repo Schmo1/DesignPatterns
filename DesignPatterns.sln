@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyThroughSerialization", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton", "Singleton", "{AB4734F3-7FD3-4D88-BC04-D1F2BE6014CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Singleton.csproj", "{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monostate", "Monostate\Monostate.csproj", "{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +117,10 @@ Global
 		{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +142,7 @@ Global
 		{FDDA4E33-60EB-433F-BEF8-4E8EC20F1535} = {824DB5EC-AFA0-4AFE-BCEC-BB6DFA3E1924}
 		{2D6FA0FE-8111-423A-AFD7-641F6F712F18} = {824DB5EC-AFA0-4AFE-BCEC-BB6DFA3E1924}
 		{85BFF4E7-CAE4-4F85-BCAE-CF1AAACBA17C} = {AB4734F3-7FD3-4D88-BC04-D1F2BE6014CD}
+		{F72DCAD8-36CB-4EE2-A320-E1AA3DD23749} = {AB4734F3-7FD3-4D88-BC04-D1F2BE6014CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3149C-2C37-43A6-BE3C-35C4C200B08C}
