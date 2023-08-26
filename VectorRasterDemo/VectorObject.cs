@@ -116,7 +116,7 @@ namespace VectorRasterDemo
                     points.Add(new Point(x, top));
                 }
             }
-
+            
             chache[has] = points;
         }
 
