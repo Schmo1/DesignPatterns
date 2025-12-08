@@ -111,6 +111,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeclarativeEventSubscriptions", "DeclarativeEventSubscriptions\DeclarativeEventSubscriptions.csproj", "{B17AC777-3EFB-4270-8F9F-E7A1073AC2BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "State", "State", "{8B0AFEB4-F2BC-492F-9CCD-42750BF5779D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassicImplementation", "ClassicImplementation\ClassicImplementation.csproj", "{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -273,6 +277,10 @@ Global
 		{B17AC777-3EFB-4270-8F9F-E7A1073AC2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B17AC777-3EFB-4270-8F9F-E7A1073AC2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B17AC777-3EFB-4270-8F9F-E7A1073AC2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -318,6 +326,7 @@ Global
 		{82A099D7-C47D-44EE-A2E2-3CB6DF82AF92} = {A7A6986A-F9FC-4E9C-9571-CDED45E7C08A}
 		{9C297B17-CC74-46BD-9789-F871A8BB43CA} = {927629B0-DDCC-44F9-B916-B2E40A0A5ED1}
 		{B17AC777-3EFB-4270-8F9F-E7A1073AC2BC} = {927629B0-DDCC-44F9-B916-B2E40A0A5ED1}
+		{7A433C23-C6E6-41EA-8AFB-5CCB80CBA0DE} = {8B0AFEB4-F2BC-492F-9CCD-42750BF5779D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3149C-2C37-43A6-BE3C-35C4C200B08C}
