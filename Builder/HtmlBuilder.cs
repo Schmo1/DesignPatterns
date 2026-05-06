@@ -16,7 +16,6 @@ namespace Builder
         {
 
         }
-
         public HtmlElement(string name, string text)
         {
             Name = name ?? throw new ArgumentException(nameof(name));
