@@ -141,6 +141,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visitor", "Visitor", "{59A7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visitor_Expression", "Visitor_Expression\Visitor_Expression.csproj", "{7EE661CC-83B3-43F5-9FD5-48D0AA4E1012}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Momento", "Momento", "{F661F0CB-47DD-4D04-8D93-86E56812F4E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{551F8397-D381-4F72-8388-2C026D9B4F58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -347,6 +351,10 @@ Global
 		{7EE661CC-83B3-43F5-9FD5-48D0AA4E1012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE661CC-83B3-43F5-9FD5-48D0AA4E1012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EE661CC-83B3-43F5-9FD5-48D0AA4E1012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{551F8397-D381-4F72-8388-2C026D9B4F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{551F8397-D381-4F72-8388-2C026D9B4F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{551F8397-D381-4F72-8388-2C026D9B4F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{551F8397-D381-4F72-8388-2C026D9B4F58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -402,6 +410,7 @@ Global
 		{F2755071-CA1B-493C-92DE-20603A4E0094} = {FE8003C7-CC52-46B4-A59F-1696CCB0C979}
 		{05CD346D-3ECC-4A9B-98C1-F2F67EE81CBE} = {AB807936-79FB-429B-9F10-749149A8FE39}
 		{7EE661CC-83B3-43F5-9FD5-48D0AA4E1012} = {59A7AACE-E53C-42CE-9FC2-F06CB71E0FCE}
+		{551F8397-D381-4F72-8388-2C026D9B4F58} = {F661F0CB-47DD-4D04-8D93-86E56812F4E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA3149C-2C37-43A6-BE3C-35C4C200B08C}
